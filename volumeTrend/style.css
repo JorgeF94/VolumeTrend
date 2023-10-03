@@ -1,0 +1,37 @@
+
+
+
+
+.highcharts-tooltip-circle {
+display: inline-block;
+border-radius: var(--border-radius-circle);
+height: 8px;
+margin-right: var(--space-xs);
+width: 8px; }
+
+.tooltip-circle {
+width: 8px;
+height: 8px;
+display: block;
+margin-right: 4px;
+border-radius: 50%; }
+
+
+  .layout-native .card{
+    padding:var(--space-base);
+  }
+  /*! 6.2.6. Card Background */
+  .card-background{
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    border-radius:var(--border-radius-soft);
+    color:var(--color-neutral-0);
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    overflow:hidden;
+    padding:var(--space-m);
+    position:relative;
+  }
+  

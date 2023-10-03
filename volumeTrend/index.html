@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<script src="jQuery.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/accessibility.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Hichcharts</title>
+
+    <style>
+        body {
+            background-color: #dedede; /* Azul claro (pode usar outras cores também) */
+        }
+        .pagination {
+            text-align: center; /* Centraliza horizontalmente */
+            margin: 10px;
+        }
+        .pagination a {
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            margin: 0 5px; /* Adiciona margem horizontal entre os elementos */
+            justify-content: center;
+            align-items: center;
+
+        }
+        .pagination a:hover {
+            background-color: #ddd;
+        }
+        .pagination .active {
+            text-decoration: underline;
+        }
+        .outer-div {
+            background-color: #ccc;
+        }
+        .inner-div {
+            background-color: #dedede;
+            padding: 10px;
+        }
+        .disabled {
+            opacity: 0.5; /* Exemplo: reduz a opacidade do elemento */
+            cursor: not-allowed; /* Exemplo: muda o cursor para "não permitido" */
+            pointer-events: none; /* Exemplo: desativa eventos de clique */
+        }
+        .card {
+            background-color: #fff; /* Cor de fundo */
+            border: 1px solid #ddd; /* Borda */
+            border-radius: 8px; /* Cantos arredondados */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            padding: 28px; /* Espaçamento interno */
+            margin: 10px; /* Margem externa */
+            width: 100%; /* Ocupa toda a largura do elemento pai */
+            height: 100%;
+        }
+        .my-chart {
+            width: 628px;
+            height: 350px;
+        }
+        .my-div {
+            width: 660px; /* Largura máxima */
+            height: 430px;
+        }
+        .my2-div {
+            width: 1370px;
+            height: 590px;
+            background-color: #f0f0f0; /* Cor de fundo (opcional) */
+        }
+        .tooltip-header {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 4px;
+            width: 100%; 
+            }
+        .tooltip-header > div {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            width: 100%;
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1; }
+        .tooltip-item > div {
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex; }
+        
+        .tooltip-item > span:not(:first-child) {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            text-align: right; }
+    </style>
+</head>
+<body>
+    <script src="highcharts.js"></script>
+    
+    <h1>Chart Samples</h1>
+    <p>List of chart samples.</p>
+    <div class="inner-div">
+        <div class="my-div card" >
+            <h2>Volume Trend</h2>
+            <div id="container" class="my-chart" data-lp="charts"></div>
+            <div class="pagination">
+                <div id="pageLinks"></div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+
+         
+</body>
+</html>

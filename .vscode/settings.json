@@ -1,0 +1,9 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "liveServer.settings.root": "/userDepartments",
+    "liveServer.settings.exts": [
+        ".html",
+        ".js",
+        ".mjs" // Adicione ".mjs" para tratar arquivos .mjs como módulos ES6
+    ]
+}
