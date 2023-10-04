@@ -22,15 +22,15 @@ document.addEventListener('DOMContentLoaded', () => {
           }
       },
     },
+    
     xAxis: {
         labels: {
             enabled: true,
             formatter: function() {
                 return Highcharts.dateFormat('%m/%d', this.value);
             }
-        }
-    },
-    
+        },
+  },
     legend: {
         enabled: true,
         verticalAlign: 'top',
@@ -54,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
         useHTML: true,
         shared: true,
         formatter: function() {
-    
           const date = new Date(this.x);
           const dateLocaleString = date.toLocaleString('en-GB', {
             month: 'long',
@@ -67,7 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
           this.points.forEach(p => {
             const text = ` ${p.series.name}: ${p.y}`;
-            const symbol = `${p.series.symbolUnicode}`;
+            //const symbol = `${p.series.symbolUnicode}`;
+            const symbol = `${p.series.symbol}`;
+            
             tooltip += '<div class=\'tooltip-item\'><div><span style=\'background-color:' + p.series.color + '\'></span><span style=\'color:' + p.series.color + '\'>' + symbol + '</span>' + text + '</div></div>';
             total += p.y;
           });
@@ -78,28 +79,39 @@ document.addEventListener('DOMContentLoaded', () => {
           return result;
         }
     },
-  series: [{
-      name: 'Installation & Developers',
-      data: [43934, 48656, 65165, 81827, 112143, 142383,
-          171533, 165174, 155157, 161454, 154610]
-  }, {
-      name: 'Manufacturing',
-      data: [24916, 37941, 29742, 29851, 32490, 30282,
-          38121, 36885, 33726, 34243, 31050]
-  }, {
-      name: 'Sales & Distribution',
-      data: [11744, 30000, 16005, 19771, 20185, 24377,
-          32147, 30912, 29243, 29213, 25663]
-  }, {
-      name: 'Operations & Maintenance',
-      data: [null, null, null, null, null, null, null,
-          null, 11164, 11218, 10077]
-  }, {
-      name: 'Other',
-      data: [21908, 5548, 8105, 11248, 8989, 11816, 18274,
-          17300, 13053, 11906, 10073]
-  }],
+    series: [
+      {
+        name: 'Asia',
+        data: [
+            [new Date('2023-08-22').getTime(), 98 ],
+            [new Date('2023-09-06').getTime(), 20 ],
+            [new Date('2023-09-08').getTime(), 29 ],
+			[new Date('2023-09-09').getTime(), 54 ]
+        ]
+      },
+      {
+        name: 'Australia',
+        data: [
+          [new Date('2023-08-22').getTime(), 103],
+          [new Date('2023-09-06').getTime(), 12 ],
+          [new Date('2023-09-07').getTime(), 39 ],
+          [new Date('2023-09-08').getTime(), 17 ],
+          [new Date('2023-09-09').getTime(), 13 ]
+        ]
+      },
+      {
+        name: 'Europe',
+        data: [
+          [new Date('2023-08-22').getTime(), 87 ],
+          [new Date('2023-09-06').getTime(), 17 ],
+          [new Date('2023-09-07').getTime(), 69 ],
+          [new Date('2023-09-09').getTime(), 23 ],
+          [new Date('2023-09-10').getTime(), 70 ]
+        ]
+      }
+    ],
   },
+
 /*
     // Função para criar os links das páginas
     function createPagination(chart) {
